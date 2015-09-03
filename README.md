@@ -1,26 +1,23 @@
-# Intro to Backbone - Models
+# Backbone Basics Models & Views
 
 ## Overview
-
 * About: General
 * Separation of Responsibilities
 * About: Specific to this Lab
 
 ## About: General
-
-Models are the data layer in Backbone, similar to their function in Rails.  They serve as in memory representations of any data/data structures you need to build a UI.  In Rails, your models help you persist data to the database.  You can retrieve in memory representations of a row of data from the database. For example, if you had a users table, you could do the following:
+Models are the data layer in Backbone, similar to their function in Rails.  They serve as in-memory representations of any data/data structures you need to build a UI. In Rails, your models help you persist data to the database.  You can retrieve in-memory representations of a row of data from the database. For example, if you had a users table, you could do the following:
 
 ```ruby
 user = User.find(1)
 # =>  #<User:0x007fe6c3e4ae88 name:Avi profession:Dean ...>
 ```
 
-The `user` variable would be an ActiveRecord object which is essentially an object wrapping a set of key value pairs `height => 6 feet`.  You can then alter the data held in that object in memory, and later call save to persist that data to the database.  Backbone has a similar model.  You can take data from a user, write it to your model, and then call save on that object.  The only difference is these objects live in memory on the client side (the users computer rather than the server) and when persisted are really making POST/PUT/PATCH requests back to the server to persist/update the data.  Backbone models can also load data from the server, so they can do the full job of syncing data.  Similar to Rails, Backbone models also hold all of the business logic for the data you need to work with.
+The `user` variable would be an ActiveRecord object which is essentially an object wrapping a set of key value pairs `:height => "6 feet"`. You can then alter the data held in that object in-memory, and later call `save` to persist that data to the database. Backbone has a similar model. You can take data from a user, write it to your model, and then call save on that object. The only difference is these objects live in-memory on the client side (the user's browser rather than the server) and when saved, they are actually making POST/PUT/PATCH AJAX requests back to the server to persist/update the data. Backbone models can also load data from the server, so they can do the full job of syncing data. Similar to Rails, Backbone models also hold all of the business logic for the data you need to work with.
 
-In Backbone, views and models work together and views in Backbone are very different than how we typically think of them in the Rails world.  A view's job in Backbone is to respond to events (user input) and write that data to models.  It's other main job is to render the UI.  As we learned in the last lab, views generally do these tasks for one specific section of the UI and know how to render all the relevant HTML and then insert it into the DOM.
+In Backbone, views and models work together. Views in Backbone are very different from how we typically think of them in the Rails world. A view's job in Backbone is to respond to events (user input) and write that data to models. Its other main job is to render the UI. As we learned in the last lab, views generally do these tasks for one specific section of the UI and know how to render all the relevant HTML and then insert it into the DOM. As such, Backbone views take care of the duties you would typically associate with the view AND the controller layers of the MVC structure.
 
 ## Separation of Responsibilities
-
 From the Backbone docs:
 
 Model
@@ -34,8 +31,7 @@ View
 * Sends captured input to the model.
 
 ## About: Specific to this Lab
-
-In this lab we want to combine the ideas of a model and a view.  Our view is going to render a form into the DOM.  It will then wait for user interaction, handle that interaction by writing the user's input into an in memory model.  In the next lab we will complete the loop by introducing the events module of Backbone which allows our views to listen to changes to the model and update themselves.
+In this lab, we want to combine the concepts of a model and a view. Our view is going to render a form into the DOM. It will then wait for user interaction, and handle that interaction by writing the user's input into an in-memory model. In the next lab, we will complete the loop by introducing the events module of Backbone which allows our views to listen to changes to the model and update themselves.
 
 Models extend/inherit from `Backbone.Model` and take an object with certain preset keys.
 
@@ -58,8 +54,7 @@ user = new User({
 ```
 
 #### Getting and Setting Values
-
-To interact with a model you must use the get and set functions defined on it.
+To interact with a model you must use the `get` and `set` functions defined on it.
 
 ```javascript
 user.get("height") #=> 6
@@ -68,13 +63,11 @@ user.get("height") #=> 6.5
 ```
 
 #### Passing Models to Views
-
-It's useful to give your views a reference to your model and sometimes the reverse is also useful. If you pass in the model key into the object used to contruct the view Backbone attaches it directly to the view object it instantiates.
+It's useful to give your views a reference to your model and sometimes the reverse is also useful. If you pass in the model key into the object used to contruct the view, Backbone attaches it directly to the view object it instantiates.
 
 ```javascript
 var myView = new MyView({model : user})
 myView.model #=> {height : 6.5, weight : 175, admin : true};
 
 ## Resources
-
 * [Tying the Model to the View](http://orizens.com/wp/topics/backbone-view-patterns-the-relationship-with-model/)
