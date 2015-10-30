@@ -5,6 +5,9 @@
 * Separation of Responsibilities
 * About: Specific to this Lab
 
+## Instructions
+
+
 ## About: General
 Models are the data layer in Backbone, similar to their function in Rails.  They serve as in-memory representations of any data/data structures you need to build a UI. In Rails, your models help you persist data to the database.  You can retrieve in-memory representations of a row of data from the database. For example, if you had a users table, you could do the following:
 
