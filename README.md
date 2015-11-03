@@ -6,7 +6,12 @@
 * About: Specific to this Lab
 
 ## Instructions
-
+1. Look in `app.js` and `user.js` and see if you will need to make any changes. 
+2. Look in `views/main.js` and read the comments to see what you will need to add.
+3. Add a submite event handler to the view that will call a function called `#submitHandler`
+4. Build out the initialize and render functions to add the commented HTML form to the DOM
+5. Build the submit handler function which will save the text in the input field and set the user models name attribute to the submitted text
+6. Pass the user model to the view and call it in app.js
 
 ## About: General
 Models are the data layer in Backbone, similar to their function in Rails.  They serve as in-memory representations of any data/data structures you need to build a UI. In Rails, your models help you persist data to the database.  You can retrieve in-memory representations of a row of data from the database. For example, if you had a users table, you could do the following:
