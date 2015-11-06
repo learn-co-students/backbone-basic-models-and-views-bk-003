@@ -3,15 +3,7 @@
 ## Overview
 * About: General
 * Separation of Responsibilities
-* About: Specific to this Lab
-
-## Instructions
-1. Look in `app.js` and `user.js` and see if you will need to make any changes. 
-2. Look in `views/main.js` and read the comments to see what you will need to add.
-3. Add a submite event handler to the view that will call a function called `#submitHandler`
-4. Build out the initialize and render functions to add the commented HTML form to the DOM
-5. Build the submit handler function which will save the text in the input field and set the user models name attribute to the submitted text
-6. Pass the user model to the view and call it in app.js
+* Instructions
 
 ## About: General
 Models are the data layer in Backbone, similar to their function in Rails.  They serve as in-memory representations of any data/data structures you need to build a UI. In Rails, your models help you persist data to the database.  You can retrieve in-memory representations of a row of data from the database. For example, if you had a users table, you could do the following:
@@ -39,11 +31,17 @@ View
 * Sends captured input to the model.
 
 ## About: Specific to this Lab
-In this lab, we want to combine the concepts of a model and a view. Our view is going to render a form into the DOM. It will then wait for user interaction, and handle that interaction by writing the user's input into an in-memory model. In the next lab, we will complete the loop by introducing the events module of Backbone which allows our views to listen to changes to the model and update themselves.
+In this lab, we want to combine the concepts of a model and a view. Our view is going to render a form into the DOM. It will then wait for user interaction, and handle that interaction by writing the user's input into an in-memory model. 
 
+### Instructions
+1. Read the Overview above and examples below to learn about the skills you will need to solve this lab. 
+2. Look in `app.js` and `user.js`. For this lab you will need both a namespace and an object.
+  + Hint: This object does not need any attributes or methods. 
+3. Look in `views/multi-useain.js` and build out the `events` hash and the `#initialize`, `#render`, and `#submitHandler` functions. 
+4. Pass the basic user model (from `models/user.js`) to the view in `app.js`.
+
+#### Examples
 Models extend/inherit from `Backbone.Model` and take an object with certain preset keys.
-
-#### Example
 
 ```javascript
 User = Backbone.Model.extend({
