@@ -37,7 +37,7 @@ In this lab, we want to combine the concepts of a model and a view. Our view is 
 1. Read the Overview above and examples below to learn about the skills you will need to solve this lab. 
 2. Look in `app.js` and `user.js`. For this lab you will need both a namespace and an object.
   + Hint: This object does not need any attributes or methods. 
-3. Look in `views/multi-useain.js` and build out the `events` hash and the `#initialize`, `#render`, and `#submitHandler` functions. 
+3. Look in `views/main.js` and build out the `events` hash and the `#initialize`, `#render`, and `#submitHandler` functions. 
 4. Pass the basic user model (from `models/user.js`) to the view in `app.js`.
 
 #### Examples
