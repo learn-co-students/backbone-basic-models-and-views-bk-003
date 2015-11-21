@@ -38,6 +38,7 @@ FormView = Backbone.View.extend({
 
     // set the model's name to have a value of the name variable here
     event.preventDefault();
-    
+    var text = $("#name").val();
+    this.model.set('name', text);
   }
 })
