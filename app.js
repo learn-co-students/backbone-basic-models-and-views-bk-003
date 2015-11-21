@@ -2,6 +2,12 @@ app = {};
 
 function bootstrap() {
   // instantiate a new user object and save it as a variable here
+  
+  var user = new User();
+  var formView = new FormView({model : user});
+  app.formView = formView
+
+  $('body').append(formView.el);
 
   // instantiate your view object here:
   //   * it should take one argument, an object:
