@@ -10,5 +10,5 @@ javascripts:
   specs:
     - lib/jasmine-jquery.js
     - spec/app.spec.js
-    - spec/user.spec.js
+    - spec/model.spec.js
     - spec/main.spec.js
