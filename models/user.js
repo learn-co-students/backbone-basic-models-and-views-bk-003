@@ -1,3 +1,13 @@
 User = Backbone.Model.extend({
-  // create your model properties here (you might not need anything)
-})
+  initialize: function() {
+    //do some stuff
+  },
+  defaults: {
+    "name": "blake"
+  }
+});
+user = new User({
+  height: 0,
+  weight: 0,
+  admin: true
+});
