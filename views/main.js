@@ -22,7 +22,7 @@ FormView = Backbone.View.extend({
   submitHandler : function(event) {
     event.preventDefault();
     var text = $('#name').val();
-    this.model.set("name", text)
+    this.model.set("name", text)  
     // make sure this function accepts the event parameter
     
     // prevent the default behavior (submission) of the form 
