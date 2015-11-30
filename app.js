@@ -11,6 +11,10 @@ function bootstrap() {
   // attach your view object to the app object as a property called "formView"
 
   // append your view object's HTML to the DOM here
+  var user = new User();
+  var formView = new FormView({model : user})
+  app.formView = formView;
+  $('body').append(app.formView.el)
 }
 
 bootstrap();
